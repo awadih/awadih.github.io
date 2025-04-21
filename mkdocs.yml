@@ -1,0 +1,25 @@
+site_name: awadih
+site_url: https://awadih.github.io/
+site_author: A. Wadih
+site_description: 'A personal blog with interests'
+repo_url: 'https://github.com/awadih/awadih.github.io'
+copyright: ''
+theme:
+  name: readthedocs
+  colorscheme: github
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - python
+  favicon: img/favicon.ico
+nav:
+  - 'Home':
+      - 'Overview': 'index.md'
+      - 'Google Maps API': 'research/research_1.md'
+  - 'Prototyping & Design':
+      - 'Wireframe': 'prototyping/prototyping_1.md'
+  - 'Development':
+      - 'Dev-Framework': 'development/development_1.md'
+  - 'Testing & Deployment':
+      - 'Hosting platform': 'deployment/deployment_1.md'
+  - 'License': 'license.md'
