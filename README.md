@@ -1,2 +1,2 @@
-# awadih.github.io
+# A personal webpage
 Personal single-page website
