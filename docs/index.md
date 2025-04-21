@@ -1,21 +1,17 @@
 <img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
-**dx-Dash** is a basic serverless application retrieving weather data through [Weather-API](https://www.weatherapi.com/) calls.
+**Personal blog** about me, a passionate postgraduate in energy sciences with IT-experience.
 
-# Welcome to MkDocs
+# Welcome to My blog
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+TODO
 
-## Commands
+## Links
 
-- `mkdocs new [dir-name]` - Create a new project.
-- `mkdocs serve` - Start the live-reloading docs server.
-- `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+```html
+<a href="https://stackexchange.com/users/17874586"><img src="https://stackexchange.com/users/flair/17874586.png" width="208" height="58" alt="profile for awadih on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for awadih on Stack Exchange, a network of free, community-driven Q&amp;A sites"></a>
+```
 
-## Project layout
+## Projects 
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+TODO
