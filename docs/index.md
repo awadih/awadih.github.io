@@ -4,7 +4,7 @@
 
 A brief portfolio about me!
 
-# Welcome :relaxed:
+# Welcome `:relaxed:`
 
 Passionate for general knowledge, I post in this peronal blog my updated works in different fields. Besides my background in energy sciences & experience in data science, I am keen on working on volunteering projects.
 
