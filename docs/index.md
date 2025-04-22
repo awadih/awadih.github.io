@@ -24,3 +24,37 @@ Write differently from usual CV: narrate and focus on soft-skills.
 ## Projects 
 
 Write differently from usual CV: narrate and focus on soft-skills.
+
+Use relative links for documentation of other projects:
+[Doc for dx-Dash](dx-Dash/docs/development/1.current_location.md)
+
+Some body text of this section.
+
+<a name="my-custom-anchor-point"></a>
+Some text I want to provide a direct link to, but which doesn't have its own heading.
+
+(… more content…)
+
+[A link to that custom anchor](#my-custom-anchor-point)
+
+## TODO
+
+- [x] #739
+- [ ] https://github.com/awadih
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
