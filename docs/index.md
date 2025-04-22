@@ -1,7 +1,4 @@
 <img src="./img/Photo.png" alt="My Photo" width="120" height="150" style="border-radius:50%">
-<img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
-
-<img src="./img/Photo.png" alt="My Photo" width="120" height="150" style="border-radius:50%"><img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
 **Personal blog**
 
@@ -82,9 +79,7 @@ Text that is not a quote
 
 
 ---
-> If we pull together and commit ourselves, then we can push through anything.
-
-— Mona the Octocat
-
+> Please feel free to contact me for any remark.
+> Happy to receive ideas and cooperate towards Projects for Good.
+<img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 <!-- COMMENT -->
-
