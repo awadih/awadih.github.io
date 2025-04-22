@@ -1,5 +1,7 @@
 <img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
+![My Photo](./img/Photo.jpeg "Mr. Abdoulah Wadih")
+
 **Personal blog**
 
 A brief portfolio about me!
