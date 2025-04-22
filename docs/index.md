@@ -79,8 +79,6 @@ Text that is not a quote
 
 
 ---
-> Please feel free to contact me for any remark.
-> Happy to receive ideas and cooperate towards Projects for Good.
-
-<img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
+> "Please feel free to contact me for any remark. Happy to receive ideas and cooperate towards Projects for Good."
+<img align="right" src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 <!-- COMMENT -->
