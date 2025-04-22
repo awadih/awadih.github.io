@@ -2,6 +2,13 @@
 
 <img src="./img/Photo.jpeg" alt="My Photo" width="120" height="150" style="border: 1px solid grey; border-radius: 25px;"/>
 
+<div class="container">
+  <img src="./img/Photo.jpeg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+</div>
+
 **Personal blog**
 
 A brief portfolio about me!
