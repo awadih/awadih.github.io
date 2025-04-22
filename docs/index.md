@@ -1,6 +1,6 @@
 <img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
-<img class="btn btn-primary rounded-0 rounded-left" src="./img/Photo.jpeg" alt="My Photo" width="120" height="150" style="border-radius:50%">
+<img class="rounded-0 rounded-left" src="./img/Photo.jpeg" alt="My Photo" width="120" height="150" style="border-radius:50%">
 
 
 **Personal blog**
