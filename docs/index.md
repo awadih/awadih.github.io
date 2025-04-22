@@ -1,6 +1,6 @@
 <img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
-<img class="flex flex-col items-center p-7 rounded-2xl" src="./img/Photo.jpeg" alt="My Photo" width="120" height="150" style="border-radius:50%">
+<img src="./img/Photo.png" alt="My Photo" width="120" height="150" style="border-radius:50%">
 
 
 **Personal blog**
@@ -67,4 +67,24 @@ Text that is not a quote
   <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
   <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
 </picture>
+
+
+<details>
+<summary>My top languages</summary>
+
+| Rank | Languages |
+|-----:|-----------|
+|     1| JavaScript|
+|     2| Python    |
+|     3| SQL       |
+
+</details>
+
+
+---
+> If we pull together and commit ourselves, then we can push through anything.
+
+— Mona the Octocat
+
+<!-- COMMENT -->
 
