@@ -1,2 +1,2 @@
-# A personal webpage
-Personal single-page website
+# Personal blog
+Single-page personal blog
