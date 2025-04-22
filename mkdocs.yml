@@ -18,8 +18,8 @@ nav:
       - 'Google Maps API': 'research/research_1.md'
   - 'Prototyping & Design':
       - 'Wireframe': 'prototyping/prototyping_1.md'
-  - 'Development':
-      - 'Dev-Framework': 'development/development_1.md'
+  - 'Projects':
+      - 'dx-Dash': 'projects/dx_dash.md'
   - 'Interests':
       - 'Volunteering': 'interests/volunteering.md'
       - 'Leisure Activities': 'interests/leisure.md'
