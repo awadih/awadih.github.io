@@ -1,6 +1,6 @@
 <img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
-<img src="./img/Photo.jpeg" alt="My Photo" width="50" height="50"/>
+<img src="./img/Photo.jpeg" alt="My Photo" width="120" height="150"/>
 
 **Personal blog**
 
