@@ -1,8 +1,6 @@
 <img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
-<img src="./img/Photo.jpeg" alt="My Photo" width="512" height="512">
-
-![My Photo](./img/Photo.jpeg "Mr. Abdoulah Wadih")
+<img src="./img/Photo.jpeg" alt="My Photo" width="50" height="50"/>
 
 **Personal blog**
 
