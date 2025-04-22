@@ -20,6 +20,10 @@ nav:
       - 'Wireframe': 'prototyping/prototyping_1.md'
   - 'Development':
       - 'Dev-Framework': 'development/development_1.md'
-  - 'Testing & Deployment':
-      - 'Hosting platform': 'deployment/deployment_1.md'
-  - 'License': 'license.md'
+  - 'Interests':
+      - 'Volunteering': 'interests/volunteering.md'
+      - 'Leisure Activities': 'interests/leisure.md'
+  - 'Contact':
+      - 'Research Profile': 'contact/research_profile.md'
+      - 'Social media': 'contact/social_media.md'
+      - 'Email': 'contact/email.md'
