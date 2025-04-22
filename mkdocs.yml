@@ -13,8 +13,8 @@ theme:
     - python
   favicon: img/favicon.ico
 nav:
-  - 'Home':
-      - 'Overview': 'index.md'
+  - 'About Me':
+      - 'bio': 'index.md'
       - 'Google Maps API': 'research/research_1.md'
   - 'Prototyping & Design':
       - 'Wireframe': 'prototyping/prototyping_1.md'
