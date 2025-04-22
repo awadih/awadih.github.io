@@ -43,6 +43,10 @@ Some text I want to provide a direct link to, but which doesn't have its own hea
 - [ ] https://github.com/awadih
 - [ ] Add delight to the experience when all tasks are complete :tada:
 
+Text that is not a quote
+
+> Text that is a quote
+
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
 
