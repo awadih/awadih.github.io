@@ -1,13 +1,7 @@
 <img src="./img/android-chrome-512x512.png" alt="logo" width="100"/>
 
-<img src="./img/Photo.jpeg" alt="My Photo" width="120" height="150" style="border: 1px solid grey; border-radius: 25px;"/>
+<img src="./img/Photo.jpeg" alt="My Photo" width="120" height="150" style="border-radius: 25px;"/>
 
-<div class="container">
-  <img src="./img/Photo.jpeg" alt="Avatar" class="image">
-  <div class="overlay" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%; opacity: 0; transition:.5s ease; background-color: #008CBA;">
-    <div class="text">Hello World</div>
-  </div>
-</div>
 
 **Personal blog**
 
