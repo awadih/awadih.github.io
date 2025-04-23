@@ -1,4 +1,4 @@
-# knapsack-algorithm-for-energy-project
+# Energy renovation project for a building
 
 fractional knapsack algorithm for optimizing energy renovation project
 
@@ -70,27 +70,15 @@ The deduction, as per the picture above, gives the following:
 - U-value ================== DIN 12831 ======================> Hij
 - Cost for each i building element and j renovation material = Kij
 
-### Analogy: fractional knapsack algorithm
+**Analogy: fractional knapsack algorithm**
 
 To explain the resolution of the problem, I refer to the basics of the fractional knapsack algorithm in the following [Webpage](https://algodaily.com/lessons/getting-to-know-greedy-algorithms-through-examples/fractional-knapsack-problem). The programmed solution calculates value x weight for each building element, which is in my case the product "heat loss costs" times "material costs" (Kej).
 
 ![Example of a fractional knapsack problem](<resources/Fractional Knapsack Problem.png>)
 
-The main steps are:
+Hereafter I used 4 main steps.
 
-- Step 1: create a Pandas dataframe
-- Step 2: loop over the set of building elements (e) and find for each element the minimum of the product Hejx Kej for each building component and insulation material:
-  $$\LARGE\min_{e}$$ = $$\LARGE\min_{j \in [1, m]} H_{ej}*K_{ej}$$
-- Step 3: sort & reorder the building elements in an ascending order of the values $$\LARGE\min_{e}$$ for e in [1, n].
-- Step 4: invest Inv as per the above found ascending order.
-
-## Credits
-
-Credits goes to [algodaily](https://algodaily.com/) for their lessons' webpage in fractional knapsack problem.
-
-# Energy renovation project for a building
-
-#### Package import
+**Package import**
 
 ```python
 import random
@@ -98,24 +86,26 @@ import numpy as np
 import pandas as pd
 ```
 
-#### Inputs
+**Inputs**
 
 Here you can change the values for investment costs, number of building elements and the m number, which is defined for the normalized problem as the maximum count of measures over all building elements.
 
 ```python
 # The total renovation investment costs
-Inv = 1000
+Inv = 5000
 # the total number of building elements
-n = 10
+n = 4
 # the maximum count of measures over all building elements for a normalized problem
 m = 5
 ```
 
-#### Parameters of the measures
+**Parameters of the measures**
 
 Values related to material costs and heat loss costs after 20 years of usage are set randomly for experimental purposes. Their values can also be loaded from other data sources, such as CSV-files.
 
-##### Experimental runs
+**Experimental runs**
+
+As no real values are available, I use hereafter experimental, sampled values:
 
 - Material costs are taken with 1 decimal point and generated using samples from a uniform distribution from low value of 50 to the highest value of 300 price unit
 - Heat loss costs after 20 years of usage from 10 to 1000 units
@@ -130,7 +120,7 @@ for i in range(n):
     d["Hij"].append(np.round(np.random.uniform(low=10, high=1000, size=(m,)), decimals=1))
 ```
 
-#### Step 1:
+#### Step 1: create a Pandas dataframe
 
 As mentioned in the Condition 2 in README.md file, the renovation of a building element can be left out, limitation either due to no sufficient investment amount or because the impact of leaving the building element without any renovation is irrelevant.
 
@@ -142,7 +132,7 @@ for i in range(len(d["Kij"])):
 df = pd.DataFrame(data=d)
 ```
 
-##### Diplay the dataframe df
+**Diplay the dataframe df**
 
 ```python
 df.head()
@@ -176,38 +166,35 @@ df.head()
     <tr>
       <th>0</th>
       <td>0</td>
-      <td>[0.0, 276.6, 239.7, 180.6, 109.5]</td>
-      <td>[56.5, 418.3, 300.0, 477.1, 104.4]</td>
+      <td>[0.0, 150.7, 272.4, 294.1, 92.9]</td>
+      <td>[408.2, 33.3, 921.1, 270.5, 666.7]</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
-      <td>[0.0, 74.5, 102.1, 257.7, 156.3]</td>
-      <td>[134.8, 898.0, 625.5, 193.9, 788.1]</td>
+      <td>[0.0, 98.8, 157.9, 284.4, 256.1]</td>
+      <td>[410.5, 45.0, 97.1, 419.4, 472.6]</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2</td>
-      <td>[0.0, 134.2, 80.6, 91.4, 59.8]</td>
-      <td>[694.0, 17.7, 152.0, 171.9, 794.9]</td>
+      <td>[0.0, 160.0, 280.5, 219.4, 153.2]</td>
+      <td>[964.4, 148.8, 518.1, 748.6, 139.6]</td>
     </tr>
     <tr>
       <th>3</th>
       <td>3</td>
-      <td>[0.0, 124.8, 246.2, 190.2, 104.9]</td>
-      <td>[651.6, 414.8, 131.2, 65.4, 245.9]</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>[0.0, 211.0, 123.3, 202.9, 59.3]</td>
-      <td>[493.2, 423.9, 251.9, 494.0, 408.6]</td>
+      <td>[0.0, 68.0, 294.2, 107.6, 81.2]</td>
+      <td>[293.3, 530.7, 618.7, 332.8, 842.2]</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-#### Step 2: towards the fractional knapsack problem
+#### Step 2: Loop over the building elements
+
+It consists of looping over the set of building elements (e) and find for each element the minimum of the product Hejx Kej for each building component and insulation material:
+$$\LARGE\min_{e}$$ = $$\LARGE\min_{j \in [1, m]} H_{ej}*K_{ej}$$
 
 Find the indices in the dataframe of the greedy renovation measures.
 
@@ -226,7 +213,9 @@ for i in df.index:
     Min.append((i, np.round(df["Kij"][i][indices[k][1]] * df["Hij"][i][indices[k][1]], decimals=1)))
 ```
 
-#### Step 3: sort & reorder
+#### Step 3: sort & reorder the dataframe
+
+sort & reorder the building elements in an ascending order of the values $$\LARGE\min_{e}$$ for e in [1, n].
 
 ```python
 # sort ascendingly
@@ -235,7 +224,7 @@ dt = pd.DataFrame(data=Min)
 dt.columns = ["e", "Min_e"]
 ```
 
-##### Diplay the dataframe dt
+**Diplay the dataframe dt**
 
 Note that the elements are well ascendingly sorted.
 
@@ -269,34 +258,29 @@ dt.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>2</td>
-      <td>2375.3</td>
+      <td>1</td>
+      <td>4446.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>7</td>
-      <td>9764.2</td>
+      <td>0</td>
+      <td>5018.3</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5</td>
-      <td>10936.4</td>
+      <td>2</td>
+      <td>21386.7</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0</td>
-      <td>11431.8</td>
-    </tr>
-    <tr>
-      <th>4</th>
       <td>3</td>
-      <td>12439.1</td>
+      <td>35809.3</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-#### Step 4:
+#### Step 4: investment plan
 
 Invest Inv starting with the lowest value of $\min_{e}$ with some help-variables
 
@@ -320,25 +304,26 @@ while toInvest > 0 and count < len(Min):
                                      df["Hij"][Min[count][0]][indices[flag][1]]))
         sum += df["Kij"][Min[count][0]][indices[flag][1]]
         counter += 1
+        count += 1
     else:
         pass
-    count += 1
 print("\n\tNumber of chosen buiding elements for renovation: {}.".format(counter))
 print("\tInvested sum: {} price unit.".format(sum))
 ```
 
     Renovation project's infos:
-    	The number of building elements:	10.
-    	The total renovation investment costs:	1000 price unit.
+    	The number of building elements:	4.
+    	The total renovation investment costs:	5000 price unit.
 
     Investement plan with ordered measures:
-    	Renovation measure 2	Kij = 134.2 price unit.		Hij = 17.7 price unit.
-    	Renovation measure 7	Kij = 121.9 price unit.		Hij = 80.1 price unit.
-    	Renovation measure 5	Kij = 149.2 price unit.		Hij = 73.3 price unit.
-    	Renovation measure 0	Kij = 109.5 price unit.		Hij = 104.4 price unit.
-    	Renovation measure 3	Kij = 190.2 price unit.		Hij = 65.4 price unit.
-    	Renovation measure 4	Kij = 59.3 price unit.		Hij = 408.6 price unit.
-    	Renovation measure 8	Kij = 209.1 price unit.		Hij = 144.1 price unit.
+    	Renovation measure 1	Kij = 98.8 price unit.		Hij = 45.0 price unit.
+    	Renovation measure 0	Kij = 150.7 price unit.		Hij = 33.3 price unit.
+    	Renovation measure 2	Kij = 153.2 price unit.		Hij = 139.6 price unit.
+    	Renovation measure 3	Kij = 107.6 price unit.		Hij = 332.8 price unit.
 
-    	Number of chosen buiding elements for renovation: 7.
-    	Invested sum: 973.4 price unit.
+    	Number of chosen buiding elements for renovation: 4.
+    	Invested sum: 510.29999999999995 price unit.
+
+## Credits
+
+Credits goes to [algodaily](https://algodaily.com/) for their lessons' webpage in fractional knapsack problem.
