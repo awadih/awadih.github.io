@@ -10,9 +10,17 @@ Passionate for general knowledge, I post in this peronal blog my updated works i
 
 ## Academic context
 
-Write differently from usual CV: narrate and focus on soft-skills.
+Here are cited some bounded parts of my curriculum as well as the essential publications I have made in the course of my education.
 
-#### Publications
+#### Education
+
+Master's Degree
+M.Sc. Renewable Energy
+Cologne University of Applied Sciences, Germany
+
+Engineering Diploma, Branch: Energy Engineering
+Graduation grade: good
+National School of Mineral Industry (ENSMR), Rabat, Morocco
 
 #### Publications
 
