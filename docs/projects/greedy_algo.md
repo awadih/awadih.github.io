@@ -57,7 +57,7 @@ For explenation purpose, I use both signs [] and {} with combined definitions in
     - K35 = [0.0, 0.0, 32.5, 16, 11]
     - K45 = [93, 34, 45, 95, 23]
 
-# Study case: renovation project for a building
+## Study case
 
 To grafically present the problem, here is an example of possible measures for a set of building components.
 
