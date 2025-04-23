@@ -57,7 +57,7 @@ For explenation purpose, I use both signs [] and {} with combined definitions in
     - K35 = [0.0, 0.0, 32.5, 16, 11]
     - K45 = [93, 34, 45, 95, 23]
 
-## Study case
+# Study case: renovation project for a building
 
 To grafically present the problem, here is an example of possible measures for a set of building components.
 
@@ -77,8 +77,6 @@ To explain the resolution of the problem, I refer to the basics of the fractiona
 ![Example of a fractional knapsack problem](<resources/Fractional Knapsack Problem.png>)
 
 Hereafter I have used 4 main steps.
-
-# Study case: renovation project for a building
 
 we apply here the algorithm in 'algorithm.ipynb' to our study case in the picture (see README.md).
 
