@@ -15,9 +15,6 @@ theme:
 nav:
   - 'About Me':
       - 'bio': 'index.md'
-      - 'Google Maps API': 'research/research_1.md'
-  - 'Prototyping & Design':
-      - 'Wireframe': 'prototyping/prototyping_1.md'
   - 'Projects':
       - 'dx-Dash': 'projects/dx_dash.md'
       - 'Energy-project': 'projects/greedy_algo.md'
