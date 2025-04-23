@@ -87,12 +87,11 @@ import pandas as pd
 ```
 
 **Inputs**
-
 Here you can change the values for investment costs, number of building elements and the m number, which is defined for the normalized problem as the maximum count of measures over all building elements.
 
 ```python
 # The total renovation investment costs
-Inv = 5000
+Inv = 500
 # the total number of building elements
 n = 4
 # the maximum count of measures over all building elements for a normalized problem
@@ -100,11 +99,9 @@ m = 5
 ```
 
 **Parameters of the measures**
-
 Values related to material costs and heat loss costs after 20 years of usage are set randomly for experimental purposes. Their values can also be loaded from other data sources, such as CSV-files.
 
 **Experimental runs**
-
 As no real values are available, I use hereafter experimental, sampled values:
 
 - Material costs are taken with 1 decimal point and generated using samples from a uniform distribution from low value of 50 to the highest value of 300 price unit
@@ -191,10 +188,7 @@ df.head()
 </table>
 </div>
 
-#### Step 2: Loop over the building elements
-
-It consists of looping over the set of building elements (e) and find for each element the minimum of the product Hejx Kej for each building component and insulation material:
-$$\LARGE\min_{e}$$ = $$\LARGE\min_{j \in [1, m]} H_{ej}*K_{ej}$$
+#### Step 2: loop over the set of building elements
 
 Find the indices in the dataframe of the greedy renovation measures.
 
@@ -213,9 +207,7 @@ for i in df.index:
     Min.append((i, np.round(df["Kij"][i][indices[k][1]] * df["Hij"][i][indices[k][1]], decimals=1)))
 ```
 
-#### Step 3: sort & reorder the dataframe
-
-sort & reorder the building elements in an ascending order of the values $$\LARGE\min_{e}$$ for e in [1, n].
+#### Step 3: sort & reorder the building elements
 
 ```python
 # sort ascendingly
@@ -280,7 +272,7 @@ dt.head()
 </table>
 </div>
 
-#### Step 4: investment plan
+#### Step 4: Investment plan
 
 Invest Inv starting with the lowest value of $\min_{e}$ with some help-variables
 
