@@ -6,7 +6,7 @@ A brief portfolio about me!
 
 # Welcome :relaxed:
 
-Passionate for general knowledge, I post in this peronal blog my updated works in different fields, namely energy-related and data-driven prjects. Besides my background in energy sciences & experience in data science, I am keen on working on volunteering projects.
+Passionate for general knowledge, I post in this peronal blog my updated works in different fields, namely energy-related and data-driven projects. Besides my background in energy sciences & experience in data science, I am keen on working on volunteering projects.
 
 ## Academic context
 

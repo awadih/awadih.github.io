@@ -20,6 +20,7 @@ nav:
       - 'Wireframe': 'prototyping/prototyping_1.md'
   - 'Projects':
       - 'dx-Dash': 'projects/dx_dash.md'
+      - 'Energy-project': 'projects/greedy_algo.md'
   - 'Interests':
       - 'Volunteering': 'interests/volunteering.md'
       - 'Leisure Activities': 'interests/leisure.md'

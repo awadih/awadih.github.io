@@ -1,6 +1,14 @@
 # Weather App using Flask Framework
 
-dx-Dash is a basic serverless application retrieving weather data through Weather-API calls.
+dx-Dash is a basic serverless Python-based web-application retrieving weather data through Weather-API calls.
+
+The following technologies have been used:
+
+- Dev-framework: [Flask Framework](https://flask.palletsprojects.com/)
+- Visualization: [Plotly Framework](https://plotly.com/)
+- CSS framework: [Bootstrap4](https://getbootstrap.com/)
+- JavaScript: Vanilla JavaScript
+- API services: [weatherapi](https://www.weatherapi.com/), [google-maps-api](https://developers.google.com/maps), [unsplash-api](https://unsplash.com/developers), [city database api](https://dev.me/products/city)
 
 Deployed app on Render: [dx-Dash](https://dx-dash.onrender.com/)
 
