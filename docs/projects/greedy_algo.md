@@ -1,4 +1,4 @@
-# knapsack-algorithm-for-energy-project
+# Greedy-algorithm for energy renovation project
 
 fractional knapsack algorithm for optimizing energy renovation project
 
@@ -70,25 +70,19 @@ The deduction, as per the picture above, gives the following:
 - U-value ================== DIN 12831 ======================> Hij
 - Cost for each i building element and j renovation material = Kij
 
-### Analogy: fractional knapsack algorithm
+**Analogy: fractional knapsack algorithm**
 
 To explain the resolution of the problem, I refer to the basics of the fractional knapsack algorithm in the following [Webpage](https://algodaily.com/lessons/getting-to-know-greedy-algorithms-through-examples/fractional-knapsack-problem). The programmed solution calculates value x weight for each building element, which is in my case the product "heat loss costs" times "material costs" (Kej).
 
 ![Example of a fractional knapsack problem](<resources/Fractional Knapsack Problem.png>)
 
-The main steps are:
-
-- Step 1: create a Pandas dataframe
-- Step 2: loop over the set of building elements (e) and find for each element the minimum of the product Hejx Kej for each building component and insulation material:
-  $$\LARGE\min_{e}$$ = $$\LARGE\min_{j \in [1, m]} H_{ej}*K_{ej}$$
-- Step 3: sort & reorder the building elements in an ascending order of the values $$\LARGE\min_{e}$$ for e in [1, n].
-- Step 4: invest Inv as per the above found ascending order.
+Hereafter I have used 4 main steps.
 
 # Study case: renovation project for a building
 
 we apply here the algorithm in 'algorithm.ipynb' to our study case in the picture (see README.md).
 
-#### Package import
+**Package import**
 
 ```python
 import random
@@ -96,7 +90,7 @@ import numpy as np
 import pandas as pd
 ```
 
-#### Inputs
+**Inputs**
 
 Here you can change the values for investment costs, number of building elements and the m number, which is defined for the normalized problem as the maximum count of measures over all building elements.
 
@@ -109,7 +103,7 @@ n = 4
 m = 5
 ```
 
-#### Parameters of the measures
+**Parameters of the measures**
 
 Values related to material costs and heat loss costs after 20 years of usage are set randomly for experimental purposes. Their values can also be loaded from other data sources, such as CSV-files.
 
@@ -130,7 +124,7 @@ for i in range(n):
     d["Hij"].append(np.round(np.random.uniform(low=10, high=1000, size=(m,)), decimals=1))
 ```
 
-#### Step 1:
+#### Step 1: Create a Pandas dataframe
 
 As mentioned in the Condition 2 in README.md file, the renovation of a building element can be left out, limitation either due to no sufficient investment amount or because the impact of leaving the building element without any renovation is irrelevant.
 
@@ -142,7 +136,7 @@ for i in range(len(d["Kij"])):
 df = pd.DataFrame(data=d)
 ```
 
-##### Diplay the dataframe df
+**Diplay the dataframe df**
 
 ```python
 df.head()
@@ -201,7 +195,7 @@ df.head()
 </table>
 </div>
 
-#### Step 2: towards the fractional knapsack problem
+#### Step 2: Loop over the set of building elements
 
 Find the indices in the dataframe of the greedy renovation measures.
 
@@ -220,7 +214,7 @@ for i in df.index:
     Min.append((i, np.round(df["Kij"][i][indices[k][1]] * df["Hij"][i][indices[k][1]], decimals=1)))
 ```
 
-#### Step 3: sort & reorder
+#### Step 3: Sort & reorder the building elements
 
 ```python
 # sort ascendingly
@@ -285,7 +279,7 @@ dt.head()
 </table>
 </div>
 
-#### Step 4:
+#### Step 4: Investment plan
 
 Invest Inv starting with the lowest value of $\min_{e}$ with some help-variables
 
