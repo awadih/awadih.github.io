@@ -24,6 +24,15 @@ National School of Mineral Industry (ENSMR), Rabat, Morocco
 
 #### Publications
 
+'Machine learning approach for finding an optimal operation strategy for a pv-diesel-hybrid system' - Poster-Exhibition at Cologne University of Applied Sciences, Germany
+2023-10-04 | conference-paper
+
+'Nutzen einer zeitbasierten Simulation von integrierten Energiesystemen' - Cologne University of Applied Sciences, Germany 2023 | working-paper
+
+'Regelung der Energieströme eines Quartiers' 2022-09 | dissertation-thesis
+
+Étude de faisabilité d’une extension du parc éolien de Lafarge Ciments – usine Tétouan II –2015 | dissertation-thesis
+
 ## Experience
 
 Write differently from usual CV: narrate and focus on soft-skills.
