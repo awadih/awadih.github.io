@@ -12,7 +12,7 @@ Held by the National School of Mineral Industry Rabat in Morocco, I cooperated t
 
 #### [Buddy program](https://www.th-koeln.de/en/international_office/th-koeln-buddy-program_101414.php)
 
-As a mentee with this program at the Cologne University of Applied Sciences in Germany, I have helped an allocated international student during my academic year of 2020 with with administrative procedures and formalities within and outside the university as well as language challenges and practical tips for everyday life in the new city.
+As a mentee with this program at the Cologne University of Applied Sciences in Germany, I have helped an allocated international student during my academic year of 2020 with administrative procedures and formalities within and outside the university as well as language challenges and practical tips for everyday life in the new city.
 
 #### Future plans
 

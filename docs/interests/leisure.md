@@ -1,6 +1,6 @@
 ## Languages
 
-A couple years ago, when young, I strived to learn the french language. Now, I can speak 4+ languages. Besides my mother tongue language Arabic, I have learnen English, German and French with some basics in Spanish. For any communication, please contact me preferably in English.
+A couple years ago, when young, I strived to learn the french language. Now, I can speak 4+ languages. Besides my mother tongue language Arabic, I have learnen English, German, French and the basics in Spanish. For any communication, please contact me preferably in English.
 
 _Language proficiency:_
 

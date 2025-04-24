@@ -1,8 +1,8 @@
 <img src="./img/Photo.png" alt="My Photo" width="120" height="150" style="border-radius:50%">
 
-**Personal blog**
+_Personal blog of A. Wadih, M. Sc._
 
-A brief portfolio about me!
+_A brief portfolio about me!_
 
 # Welcome
 
