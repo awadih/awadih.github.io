@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="A. Wadih" /><link rel="canonical" href="https://awadih.github.io/projects/greedy_algo/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Energy-project - awadih</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Energy-project";
+        var mkdocs_page_input_path = "projects/greedy_algo.md";
+        var mkdocs_page_url = "/projects/greedy_algo/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> awadih
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">About Me</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">bio</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Projects</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../dx_dash/">dx-Dash</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Energy-project</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#context">Context</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conditions">Conditions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nomenclature">Nomenclature</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#study-case">Study case</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-1-create-a-pandas-dataframe">Step 1: Create a Pandas dataframe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-2-loop-over-the-set-of-building-elements">Step 2: Loop over the set of building elements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-3-sort-reorder-the-building-elements">Step 3: Sort &amp; reorder the building elements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-4-investment-plan">Step 4: Investment plan</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#credits">Credits</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Interests</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interests/volunteering/">Volunteering</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../interests/leisure/">Leisure Activities</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/research_profile/">Research Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/social_media/">Social media</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/email/">Email</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">awadih</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Projects</li>
+      <li class="breadcrumb-item active">Energy-project</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/awadih/awadih.github.io/edit/master/docs/projects/greedy_algo.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="greedy-algorithm-for-energy-renovation-project">Greedy-algorithm for energy renovation project</h1>
+<p>fractional knapsack algorithm for optimizing energy renovation project</p>
+<h2 id="context">Context</h2>
+<p>The developement &amp; application of this greedy algorithm have raised as I had the task to suggest restoration measures for buildings at the amperias GmbH company in Germany. The calculation method of the heat load is according to the standard <a href="https://www.din.de/de/mitwirken/normenausschuesse/nhrs/veroeffentlichungen/wdc-beuth:din21:261292587">DIN 12831</a>. In the course of this calculation, for each building structure component, such as walls, roofs, etc., an insulation material has been chosen from a set of choices.</p>
+<h2 id="objective">Objective</h2>
+<p>An energy consultant assesses the building insulation, sets the requirements, but he/she has many insulation materials for each building component, which responds to the energetic requirements, namely the heating load. But, the performace of each insulation material reduces over time (the rate of depreciation). A well thoughtful choice for each building component should be proactive.
+Therefore, I reformulate the objective as to gain the maximum insulation, e.g. minimum heat loss costs, for the whole building while investing the maximum of a given money amount.</p>
+<h2 id="conditions">Conditions</h2>
+<ul>
+<li>Condition 1: to take into account the rate of depreciation, I set hereafter the lifespan of the building renovation project with 20 years. The assessement considers then heat losses after 20 years of usage for each insulation material.</li>
+<li>Condition 2: the renovation of a building element can be left out, limitation either due to no sufficient investment amount or because the impact of leaving the building element without any renovation is irrelevant. In the code, we can have as a result: (number of renovated elements) counter &lt; (total number of building elements) df.shape[0]</li>
+</ul>
+<p>On the other hand, many other factors such as the varying price of the insulation material in the markt, I give with this code an automated solution to possible biases.</p>
+<h2 id="nomenclature">Nomenclature</h2>
+<p>For explenation purpose, I use both signs [] and {} with combined definitions in logics in Math and the programming language Python.</p>
+<ul>
+<li>Inv: the total renovation investment costs</li>
+<li>Hij: heat loss costs for each insulation material after 20 years of usage for each renovation measure j and building element i (In German: Wärmeverlustkosten)</li>
+<li>Kij: the material costs for each renovation measure j and building element i (Materialkosten)</li>
+<li>n: total number of building elements</li>
+<li>m: the maximum count of measures over all building elements for a normalized problem</li>
+<li>e: the index of the building element in the algorithm
+  Here is an explenation:</li>
+</ul>
+<p>Mathematical problem:</p>
+<ul>
+<li>Set E = {E1, E2, ..., En} and each building element Ei has Mij as a set of its possible renovation measures, for i in [1, ..., n] and j in [1, ..., m]</br></li>
+<li>
+<p>In the example given in the image:</br></p>
+<ul>
+<li>n = 4</li>
+<li>E = {"Window", "Ceiling", "Roof", "Wall"}</li>
+<li>M1 = {"Single-Glazed Window", "Double glazed window"}</li>
+<li>M2 = {"Mineral wool", "Spray foam", "Rigid foam boards", "Cellulose", "Sheep wool"}</li>
+<li>M3 = {"Structural insulated panels", "Foam board", "Rigid foam"}</li>
+<li>M4 = {"Blanket: batts and rolls", "Concrete blocks insulation", "Insulating concrete forms (ICFs)", "Foam board or rigid foam", "Reflective system"}</br></li>
+</ul>
+</li>
+</ul>
+<p>Normalized problem:</p>
+<ul>
+<li>In the programming code, we normalize the sets Mij for all i values in [1, ..., n], the set Mij could be written Mim and the above mentioned example becomes:<ul>
+<li>n = 4, m = 5</li>
+<li>E = {"Window", "Ceiling", "Roof", "Wall"}</li>
+<li>M15 = {"", "", "", "Single-Glazed Window", "Double glazed window"}</li>
+<li>M25 = {"Mineral wool", "Spray foam", "Rigid foam boards", "Cellulose", "Sheep wool"}</li>
+<li>M35 = {"", "", "Structural insulated panels", "Foam board", "Rigid foam"}</li>
+<li>M45 = {"Blanket: batts and rolls", "Concrete blocks insulation", "Insulating concrete forms (ICFs)", "Foam board or rigid foam", "Reflective system"}</li>
+</ul>
+</li>
+<li>Note that, the measure "" in each set measures means that no measure could be taken, so the costs are taken in the algorithm 0.0 price unit (price unit: €, $, ... etc.). The costs' sets could be then written for example:<ul>
+<li>K15 = [0.0, 0.0, 0.0, 10, 13]</li>
+<li>K25 = [45, 56, 67, 18, 19]</li>
+<li>K35 = [0.0, 0.0, 32.5, 16, 11]</li>
+<li>K45 = [93, 34, 45, 95, 23]</li>
+</ul>
+</li>
+</ul>
+<h2 id="study-case">Study case</h2>
+<p>To grafically present the problem, here is an example of possible measures for a set of building components.</p>
+<p><img alt="Renovation project - Presentation example with four building components" src="../resources/renovation%20for%20a%20building%20-%20diagram.jpg" /></p>
+<p>The deduction of the values of Hij for each insulation material and building component can be done after heat loss calculations with the norm <a href="https://www.din.de/de/mitwirken/normenausschuesse/nhrs/veroeffentlichungen/wdc-beuth:din21:261292587">DIN 12831</a>.</p>
+<p>The deduction, as per the picture above, gives the following:</p>
+<ul>
+<li>U-value ================== DIN 12831 ======================&gt; Hij</li>
+<li>Cost for each i building element and j renovation material = Kij</li>
+</ul>
+<p><strong>Analogy: fractional knapsack algorithm</strong></p>
+<p>To explain the resolution of the problem, I refer to the basics of the fractional knapsack algorithm in the following <a href="https://algodaily.com/lessons/getting-to-know-greedy-algorithms-through-examples/fractional-knapsack-problem">Webpage</a>. The programmed solution calculates value x weight for each building element, which is in my case the product "heat loss costs" times "material costs" (Kej).</p>
+<p><img alt="Example of a fractional knapsack problem" src="../resources/Fractional%20Knapsack%20Problem.png" /></p>
+<p>Hereafter I have used 4 main steps.</p>
+<p>we apply here the algorithm in 'algorithm.ipynb' to our study case in the picture (see README.md).</p>
+<p><strong>Package import</strong></p>
+<pre><code class="language-python">import random
+import numpy as np
+import pandas as pd
+</code></pre>
+<p><strong>Inputs</strong></p>
+<p>Here you can change the values for investment costs, number of building elements and the m number, which is defined for the normalized problem as the maximum count of measures over all building elements.</p>
+<pre><code class="language-python"># The total renovation investment costs
+Inv = 5000
+# the total number of building elements
+n = 4
+# the maximum count of measures over all building elements for a normalized problem
+m = 5
+</code></pre>
+<p><strong>Parameters of the measures</strong></p>
+<p>Values related to material costs and heat loss costs after 20 years of usage are set randomly for experimental purposes. Their values can also be loaded from other data sources, such as CSV-files.</p>
+<p><strong>Experimental runs</strong></p>
+<p>As no real values are available, I use hereafter experimental, sampled values:</p>
+<ul>
+<li>Material costs are taken with 1 decimal point and generated using samples from a uniform distribution from low value of 50 to the highest value of 300 price unit</li>
+<li>Heat loss costs after 20 years of usage from 10 to 1000 units</li>
+</ul>
+<pre><code class="language-python">d = {&quot;e&quot;: [], &quot;Kij&quot;: [], &quot;Hij&quot;: []}
+for i in range(n):
+    d[&quot;e&quot;].append(i)
+    # Material costs
+    d[&quot;Kij&quot;].append(np.round(np.random.uniform(low=50, high=300, size=(m-1,)), decimals=1))
+    # Heat loss costs TODO(&quot;Rethink low and high values&quot;)
+    d[&quot;Hij&quot;].append(np.round(np.random.uniform(low=10, high=1000, size=(m,)), decimals=1))
+</code></pre>
+<h4 id="step-1-create-a-pandas-dataframe">Step 1: Create a Pandas dataframe</h4>
+<p>As mentioned in the Condition 2 in README.md file, the renovation of a building element can be left out, limitation either due to no sufficient investment amount or because the impact of leaving the building element without any renovation is irrelevant.</p>
+<p>So, we should add 0.0 price unit to the dictionary d and consequently to the dataframe df.</p>
+<pre><code class="language-python">for i in range(len(d[&quot;Kij&quot;])):
+    d[&quot;Kij&quot;][i] = np.insert(d[&quot;Kij&quot;][i], [0], [0], axis=0)
+df = pd.DataFrame(data=d)
+</code></pre>
+<p><strong>Diplay the dataframe df</strong></p>
+<pre><code class="language-python">df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e</th>
+      <th>Kij</th>
+      <th>Hij</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>[0.0, 150.7, 272.4, 294.1, 92.9]</td>
+      <td>[408.2, 33.3, 921.1, 270.5, 666.7]</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>[0.0, 98.8, 157.9, 284.4, 256.1]</td>
+      <td>[410.5, 45.0, 97.1, 419.4, 472.6]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>[0.0, 160.0, 280.5, 219.4, 153.2]</td>
+      <td>[964.4, 148.8, 518.1, 748.6, 139.6]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>[0.0, 68.0, 294.2, 107.6, 81.2]</td>
+      <td>[293.3, 530.7, 618.7, 332.8, 842.2]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 id="step-2-loop-over-the-set-of-building-elements">Step 2: Loop over the set of building elements</h4>
+<p>Find the indices in the dataframe of the greedy renovation measures.</p>
+<p>To do so, we calculate $\min_{e}$ for each e building element. We define hereafter some helpers variables and find sort their values.</p>
+<pre><code class="language-python">indices = []
+helper = []
+Min = []
+for i in df.index:
+    product = [km * kg for (km, kg) in zip(df[&quot;Kij&quot;][i], df[&quot;Hij&quot;][i])]
+    indices.append((i, product.index(min([value for value in product if value &gt; 0]))))
+    helper.append(i)
+for i in df.index:
+    k = helper.index(i)
+    Min.append((i, np.round(df[&quot;Kij&quot;][i][indices[k][1]] * df[&quot;Hij&quot;][i][indices[k][1]], decimals=1)))
+</code></pre>
+<h4 id="step-3-sort-reorder-the-building-elements">Step 3: Sort &amp; reorder the building elements</h4>
+<pre><code class="language-python"># sort ascendingly
+Min.sort(key=lambda x: x[1])
+dt = pd.DataFrame(data=Min)
+dt.columns = [&quot;e&quot;, &quot;Min_e&quot;]
+</code></pre>
+<p><strong>Diplay the dataframe dt</strong></p>
+<p>Note that the elements are well ascendingly sorted.</p>
+<pre><code class="language-python">dt.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>e</th>
+      <th>Min_e</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>4446.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>5018.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>21386.7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>35809.3</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 id="step-4-investment-plan">Step 4: Investment plan</h4>
+<p>Invest Inv starting with the lowest value of $\min_{e}$ with some help-variables</p>
+<pre><code class="language-python"># Display for the project's inputs:
+print(&quot;Renovation project's infos:&quot;)
+print(&quot;\tThe number of building elements:\t{}.&quot;.format(n))
+print(&quot;\tThe total renovation investment costs:\t{} price unit.&quot;.format(Inv))
+# Display for the investement plan:
+print(&quot;\nInvestement plan with ordered measures:&quot;)
+count = 0
+toInvest = Inv
+sum = 0
+counter = 0
+while toInvest &gt; 0 and count &lt; len(Min):
+    flag = helper.index(Min[count][0])
+    if toInvest &gt; df[&quot;Kij&quot;][Min[count][0]][indices[flag][1]]:
+        toInvest -= df[&quot;Kij&quot;][Min[count][0]][indices[flag][1]]
+        print(
+            &quot;\tRenovation measure {}\tKij = {} price unit.\t\tHij = {} price unit.&quot;.format(Min[count][0], df[&quot;Kij&quot;][Min[count][0]][indices[flag][1]],
+                                     df[&quot;Hij&quot;][Min[count][0]][indices[flag][1]]))
+        sum += df[&quot;Kij&quot;][Min[count][0]][indices[flag][1]]
+        counter += 1
+        count += 1
+    else:
+        pass
+print(&quot;\n\tNumber of chosen buiding elements for renovation: {}.&quot;.format(counter))
+print(&quot;\tInvested sum: {} price unit.&quot;.format(sum))
+</code></pre>
+<pre><code>Renovation project's infos:
+The number of building elements: 4.
+The total renovation investment costs: 500 price unit.
+
+Investement plan with ordered measures:
+Renovation measure 3 Kij = 247.7 price unit. Hij = 49.4 price unit.
+Renovation measure 1 Kij = 61.5 price unit. Hij = 243.1 price unit.
+Renovation measure 0 Kij = 62.6 price unit. Hij = 436.3 price unit.
+Renovation measure 2 Kij = 69.2 price unit. Hij = 845.8 price unit.
+
+  Number of chosen buiding elements for renovation: 4.
+  Invested sum: 441.0 price unit.
+</code></pre>
+<h2 id="credits">Credits</h2>
+<p>Credits goes to <a href="https://algodaily.com/">algodaily</a> for their lessons' webpage in fractional knapsack problem.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../dx_dash/" class="btn btn-neutral float-left" title="dx-Dash"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../interests/volunteering/" class="btn btn-neutral float-right" title="Volunteering">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/awadih/awadih.github.io" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../dx_dash/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../interests/volunteering/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
